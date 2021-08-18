@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	function enter(linha) {
+		for (var i = linha; i >= 0; i--) {
+			document.write("<br>")
+		}
+		
+	}
+	function print(mensagem,valor){
+		document.write(mensagem);
+		if (valor == true) {
+			enter(0);
+		}
+	}
+	function number(mensagem){
+		var n = parseInt(prompt(mensagem));
+		while(isNaN(n)){
+			alert("Digite um número...")
+			var n = parseInt(prompt(mensagem));
+		}
+		return n;
+	}
+	var pessoas = number("Quantas Idades você quer comparar?");
+	var soma = 0;
+
+	for(var contagem = 1; contagem <= pessoas; contagem++){
+		soma = soma + (number("Digite a idade da " + contagem + "° pessoa!"));
+	}
+	var media = soma/pessoas;
+
+	print("A média da idade de vocês é " + media + " anos!")
+
+</script>

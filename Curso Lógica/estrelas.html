@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	function enter(linha) {
+		for (var i = linha; i >= 0; i--) {
+			document.write("<br>")
+		}
+		
+	}
+	function print(mensagem,valor){
+		document.write(mensagem);
+		if (valor == true) {
+			enter(0);
+		}
+	}
+	function number(mensagem){
+		var n = parseInt(prompt(mensagem));
+		while(isNaN(n)){
+			alert("Digite um número...")
+			var n = parseInt(prompt(mensagem));
+		}
+		return n;
+	}
+	
+	for(var linha = 1; linha <= 3; linha ++){
+		for(var estrelas = 1; estrelas <= 10; estrelas ++){
+			print("*");
+		}
+		enter(0);
+	}
+</script>

@@ -1,0 +1,29 @@
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext("2d");
+
+	drawFraction(0,0,3,4);
+	
+	function drawFraction(x,y,numerador,denominador){
+		var vx = x;
+		var vy = y;
+
+		for (var i = numerador; i > 0; i--) {
+			pincel.fillStyle = "green";
+			pincel.fillRect(vx,vy,50,50);
+			pincel.fillStroke = "black";
+			pincel.strokeRect(vx,vy,50,50);
+			vx = vx + 50;
+		}
+		for (var i = denominador - numerador; i > 0; i--) {
+			pincel.fillStroke = "black";
+			pincel.strokeRect(vx,vy,50,50);
+			vx = vx + 50;
+		}
+		
+	}
+
+</script>

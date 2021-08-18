@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	function enter(linha) {
+		for (var i = linha; i >= 0; i--) {
+			document.write("<br>")
+		}
+		
+	}
+	function print(mensagem,valor){
+		document.write(mensagem);
+		if (valor == true) {
+			enter(0);
+		}
+	}
+	function number(mensagem){
+		var n = parseInt(prompt(mensagem));
+		while(isNaN(n)){
+			alert("Digite um número...")
+			var n = parseInt(prompt(mensagem));
+		}
+		return n;
+	}
+	var numax = number("Digite o número máximo:")
+	var vidas = number("Com quantas vidas você deseja começar?")
+	var level = 0;
+	var next = false;
+	vidas--
+
+	while(vidas > 0){
+		next = false;
+		level++
+		vidas ++
+		alert("Nível " + level);
+		alert(vidas + " vidas restantes")
+		var num = Math.round(Math.random() * numax);
+
+		while(vidas > 0 && next == false){
+			var chute = number("Digite seu chute:");
+			if(chute == num) {
+				alert("Você acertou");
+				alert("Parabéns!!!");
+				next = true;
+			} else if(chute > num) {
+				alert("Você errou! O número correto é menor");
+				vidas--
+				alert(vidas + " vidas restantes")
+			} else if(chute < num) {
+				alert("Você errou! O número correto é maior");
+				vidas--
+				alert(vidas + " vidas restantes")
+			} else {
+				alert("Ocorreu algum erro, recarregue a página")
+				vidas = -1;
+			}
+		}
+	}
+
+	print("Fim de jogo",true);
+	print("Aperte ctrl + R para jogar novamente");
+
+</script>

@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	function print(mensagem){
+		document.write(mensagem);
+	}
+	var ano = 2020;
+	var flavio = ano - 1977;
+	var joaquim = ano - 1996;
+	var barney = ano - 1976;
+
+    print("Flávio tem " + (flavio) + " anos");
+    pulaLinha();
+    print("Joaquim tem " + (joaquim) + " anos");
+    pulaLinha();
+    print("Barney tem " + (barney) + " anos");
+    pulaLinha();
+
+    var média = (flavio + joaquim + barney)/3
+    print("<br>A média das idades é " + Math.round(média) + " anos");
+</script>

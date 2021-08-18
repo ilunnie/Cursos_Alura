@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	function enter(linha) {
+		for (var i = linha; i >= 0; i--) {
+			document.write("<br>")
+		}
+		
+	}
+	function print(mensagem,valor){
+		document.write(mensagem);
+		if (valor == true) {
+			enter(0);
+		}
+	}
+
+	var limite = parseInt(prompt("Entre com o ano limite:"));
+	var ano = 1930;
+	var contagem = 0;
+
+	while(ano <= limite){
+	print("Teve copa em " + ano,true);
+	ano = ano + 4;
+	contagem = contagem + 1;
+	}
+
+	enter(0);
+	print("FIM",true);
+	print("Foram " + contagem + " copas",true);
+
+</script>

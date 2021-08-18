@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	function enter(linha) {
+		for (var i = linha; i >= 0; i--) {
+			document.write("<br>")
+		}
+		
+	}
+	function print(mensagem,valor){
+		document.write(mensagem);
+		if (valor == true) {
+			enter(0);
+		}
+	}
+	function calimc(peso,altura){
+		return peso/(altura*altura);
+	}
+	var nome = prompt("Qual é seu nome?")
+	var alturaInformada = prompt(nome + ",Informe sua altura");
+	var pesoInformado = prompt(nome + ",Informe seu peso");
+
+	var imc = calimc(pesoInformado,alturaInformada);
+
+	print(nome + ", O seu imc é aproximadamente " + Math.round(imc));
+	enter(1);
+
+	if(imc < 18.5) {
+		print("Você está abaixo do recomendado");
+	} else if(imc > 35) {
+		print("Você está acima do recomendado")
+	} else {
+		print("Seu imc está dentro do recomendado, Parabéns!")
+	}
+
+</script>

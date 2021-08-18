@@ -1,0 +1,25 @@
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext("2d");
+
+	var x =0;
+	var y =0;
+	while(y<=400){
+		while(x <= 600){
+			drawSquare(x,y,"green");
+			x = x+50;
+		}
+		y = y+50;
+		x = 0;
+	}
+	
+	function drawSquare(x,y,cor){
+		pincel.fillStyle = cor;
+		pincel.fillRect(x,y,50,50);
+		pincel.fillStroke = "black";
+		pincel.strokeRect(x,y,50,50);
+	}
+</script>

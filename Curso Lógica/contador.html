@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+	function enter(linha) {
+		for (var i = linha; i >= 0; i--) {
+			document.write("<br>")
+		}
+		
+	}
+	function print(mensagem,valor){
+		document.write(mensagem);
+		if (valor == true) {
+			enter(0);
+		}
+	}
+	//----------------------------
+	//num = 2;
+
+	//while(num <= 100){
+	//	print(num,true);
+	//	num = num + 2;
+	//}
+	//----------------------------
+	//var num = 30;
+
+	//while(num <= 40){
+	//	if(num == 33){
+
+	//	} else if(num == 37){
+
+	//	} else{
+	//		print(num,true);
+	//	}
+	//	num = num + 1;
+	//}
+	//----------------------------
+	var num = 20;
+
+	while(num >= 0){
+		print(num,true);
+		num = num - 1;
+	}
+	//----------------------------
+
+	print("FIM");
+</script>

@@ -1,0 +1,24 @@
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+	pincel.fillStyle = "grey";
+	pincel.fillRect(0,0,600,400);
+
+	tela.onclick = displayCircle;
+
+	function drawCircle(x, y, cor){
+		pincel.fillStyle = cor;
+		pincel.beginPath();
+		pincel.arc(x, y, 10, 0, 2 * 3.14);
+		pincel.fill();
+	}
+	function displayCircle(evento){
+		var x = evento.pageX - tela.offsetLeft;
+		var y = evento.pageY - tela.offsetTop;
+		drawCircle(x, y, "blue");
+		console.log('Você clicou em x:' + x + ', y:' + y);
+	}
+</script>
